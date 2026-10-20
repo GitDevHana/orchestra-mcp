@@ -1,0 +1,32 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.archify/
+demo-data/
+real-runs/
+
+# Local credentials and runtime state
+.env
+.env.*
+!.env.example
+.orchestra-data/
+*.log
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+server.json
+shared-mcp-token
+
+# Local reports and development session notes
+/codex-quota-current.json
+/demo-result.json
+/test-result.txt
+/preview.html
+/real-codex-example.json
+/real-dual-example.json
+/HANDOFF.md
+/LIFECYCLE-HANDOFF.md
+/RESUME-*.md
+/RESTART-HANDOFF-*.md
+/STATUS-*.md

@@ -1,0 +1,12 @@
+{
+  "task": "프로젝트를 점검하고 작은 개선을 구현한 뒤 독립적으로 검토하세요.",
+  "workspace": "C:\\projects\\your-project",
+  "agents": [
+    {"provider": "codex", "name": "구현자", "role": "코드를 수정하고 검증한다", "max_tokens": 30000},
+    {"provider": "claude", "name": "검토자", "role": "변경을 독립적으로 검토하고 문제를 구체적으로 지적한다", "max_tokens": 20000}
+  ],
+  "max_seconds": 600,
+  "max_rounds": 3,
+  "access": "workspace-write",
+  "validation_commands": []
+}

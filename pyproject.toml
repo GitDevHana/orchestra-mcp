@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-orchestrator-mcp"
+version = "0.1.0"
+description = "Local MCP orchestration for independent Codex, Cursor and Claude sessions"
+requires-python = ">=3.11"
+dependencies = ["mcp>=1.26,<2", "pydantic>=2.10,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10", "pytest-asyncio>=1,<2"]
+
+[project.scripts]
+agent-orchestrator = "orchestrator.server:main"
+
+[tool.setuptools.package-data]
+orchestrator = ["static/*.html", "static/*.js"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
